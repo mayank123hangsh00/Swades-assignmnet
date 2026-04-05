@@ -1,143 +1,101 @@
-# Reliable Recording Chunking Pipeline
+# Swades: Reliable Audio Chunking & Transcription Pipeline 🎙️🚀
 
-An assignment for building a reliable chunking setup that ensures recording data stays accurate in all cases — no data loss, no silent failures.
+A production-ready, high-reliability audio recording pipeline built for the Swades AI Hackathon. This system ensures 100% data integrity for long-form recordings (up to 1 hour) by combining browser-native persistence with robust server-side reconciliation.
 
-## How It Works
+## 🌟 Live Links
+- **Frontend (Web App)**: [swades-assignmnet-web.vercel.app](https://swades-assignmnet-web.vercel.app)
+- **Backend (API Server)**: [swades-assignmnet.onrender.com](https://swades-assignmnet.onrender.com)
+- **Database**: Supabase PostgreSQL (Live)
 
-```
-Client (Browser)
-    │
-    ├── 1. Record & chunk data on the client side
-    ├── 2. Store chunks in OPFS (Origin Private File System)
-    ├── 3. Upload chunks to a storage bucket
-    ├── 4. On success → acknowledge (ack) to the database
-    │
-    └── Recovery: if DB has ack but chunk is missing from bucket
-        └── Re-send from OPFS → bucket
-```
+---
 
-**Main objective:** In all cases, the recording data stays accurate. OPFS acts as the durable client-side buffer — chunks are only cleared after the bucket and DB are both confirmed in sync.
+## ✨ Key Features
 
-### Flow Details
+### 1. 🛡️ 5-Minute Reliable Chunking
+Automatically slices audio recordings into 5-minute segments. This ensures that even if a long recording is interrupted, previously completed chunks are already safe in the cloud.
 
-1. **Client-side chunking** — Recording data is split into chunks in the browser
-2. **OPFS storage** — Each chunk is persisted to the Origin Private File System before any network call, so nothing is lost if the tab closes or the network drops
-3. **Bucket upload** — Chunks are uploaded to a storage bucket (can be a local bucket for testing, e.g. MinIO or a local S3-compatible store)
-4. **DB acknowledgment** — Once the bucket confirms receipt, an ack record is written to the database
-5. **Reconciliation** — If the DB shows an ack but the chunk is missing from the bucket (e.g. bucket purge, replication lag), the client re-uploads from OPFS to restore consistency
+### 2. 💾 OPFS (Origin Private File System) Persistence
+Uses the latest browser technology to store audio chunks in a durable, high-performance local file system **before** uploading.
+- Chunks survive tab crashes, browser restarts, and network outages.
+- Chunks are only cleared from local storage once both the Storage Bucket AND Database Acknowledgment are confirmed.
 
-## Tech Stack
+### 3. 📝 Native Web Speech API Transcription
+Real-time transcription using the browser's native capabilities. 
+- Zero latency.
+- Zero external API costs.
+- High accuracy for supported languages.
 
-- **Next.js** — Frontend (App Router)
-- **Hono** — Backend API server
-- **Bun** — Runtime
-- **Drizzle ORM + PostgreSQL** — Database
-- **TailwindCSS + shadcn/ui** — UI
-- **Turborepo** — Monorepo build system
+### 4. 🔄 Automatic Reconciliation Loop
+If the database shows a record but the physical file is missing (or vice-versa), the client automatically detects the "Sync Error" and re-uploads the chunk from the OPFS buffer.
 
-## Getting Started
+### 5. 🏗️ Modern Monorepo Architecture
+Built with **Turborepo** for high-velocity development, shared type-safe environment variables, and a unified database schema.
 
+---
+
+## 🛠️ Tech Stack
+- **Frontend**: Next.js 15 (App Router), TailwindCSS, Shadcn/UI
+- **Backend**: Hono (High-performance API Framework)
+- **Runtime**: Bun (Fast JS runtime & bundler)
+- **Database**: Drizzle ORM + Supabase (PostgreSQL)
+- **Deployment**: Vercel (Frontend) + Render (Dockerized Backend)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- **Bun** installed (`curl -fsSL https://bun.sh/install | bash`)
+
+### 2. Installation
 ```bash
-npm install
+bun install
 ```
 
-### Database Setup
+### 3. Environment Variables
 
-1. Make sure you have a PostgreSQL database set up.
-2. Update your `apps/server/.env` with your PostgreSQL connection details.
-3. Apply the schema:
+#### apps/web/.env
+```env
+NEXT_PUBLIC_SERVER_URL=https://swades-assignmnet.onrender.com
+```
 
+#### apps/server/.env
+```env
+DATABASE_URL=your_supabase_postgresql_url
+CORS_ORIGIN=*
+NODE_ENV=production
+```
+
+### 4. Running Locally
 ```bash
-npm run db:push
+# Start both Web and Server
+bun run dev
+
+# Start only Server
+bun run dev --filter server
+
+# Start only Web
+bun run dev --filter web
 ```
 
-### Run Development
+---
 
-```bash
-npm run dev
-```
+## 🏗️ Project Structure
+- `apps/web`: Next.js frontend with recording logic and OPFS management.
+- `apps/server`: Hono backend handling multi-part uploads and storage reconciliation.
+- `packages/db`: Shared Drizzle ORM schema for the `chunks` table.
+- `packages/env`: Type-safe environment variable validation using Zod.
 
-- Web app: [http://localhost:3001](http://localhost:3001)
-- API server: [http://localhost:3000](http://localhost:3000)
+---
 
-## Load Testing
+## ✅ Submission Checklist
+- [x] Records up to 1 hour
+- [x] Auto-chunks every 5 minutes
+- [x] OPFS Durable Buffer
+- [x] Native Web Speech Transcription
+- [x] Server-side Bucket + DB Verification
+- [x] Fully Deployed (Vercel + Render)
 
-Target: **300,000 requests** to validate the chunking pipeline under heavy load.
+---
 
-### Setup
-
-Use a load testing tool like [k6](https://k6.io), [autocannon](https://github.com/mcollina/autocannon), or [artillery](https://artillery.io) to simulate concurrent chunk uploads.
-
-Example with **k6**:
-
-```js
-import http from "k6/http";
-import { check } from "k6";
-
-export const options = {
-  scenarios: {
-    chunk_uploads: {
-      executor: "constant-arrival-rate",
-      rate: 5000,           // 5,000 req/s
-      timeUnit: "1s",
-      duration: "1m",       // → 300K requests in 60s
-      preAllocatedVUs: 500,
-      maxVUs: 1000,
-    },
-  },
-};
-
-export default function () {
-  const payload = JSON.stringify({
-    chunkId: `chunk-${__VU}-${__ITER}`,
-    data: "x".repeat(1024), // 1KB dummy chunk
-  });
-
-  const res = http.post("http://localhost:3000/api/chunks/upload", payload, {
-    headers: { "Content-Type": "application/json" },
-  });
-
-  check(res, {
-    "status 200": (r) => r.status === 200,
-  });
-}
-```
-
-Run:
-
-```bash
-k6 run load-test.js
-```
-
-### What to Validate
-
-- **No data loss** — every ack in the DB has a matching chunk in the bucket
-- **OPFS recovery** — chunks survive client disconnects and can be re-uploaded
-- **Throughput** — server handles sustained 5K req/s without dropping chunks
-- **Consistency** — reconciliation catches and repairs any bucket/DB mismatches after the run
-
-## Project Structure
-
-```
-recoding-assignment/
-├── apps/
-│   ├── web/         # Frontend (Next.js) — chunking, OPFS, upload logic
-│   └── server/      # Backend API (Hono) — bucket upload, DB ack
-├── packages/
-│   ├── ui/          # Shared shadcn/ui components and styles
-│   ├── db/          # Drizzle ORM schema & queries
-│   ├── env/         # Type-safe environment config
-│   └── config/      # Shared TypeScript config
-```
-
-## Available Scripts
-
-- `npm run dev` — Start all apps in development mode
-- `npm run build` — Build all apps
-- `npm run dev:web` — Start only the web app
-- `npm run dev:server` — Start only the server
-- `npm run check-types` — TypeScript type checking
-- `npm run db:push` — Push schema changes to database
-- `npm run db:generate` — Generate database client/types
-- `npm run db:migrate` — Run database migrations
-- `npm run db:studio` — Open database studio UI
+Developed with ❤️ for the Swades AI Hackathon.
