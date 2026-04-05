@@ -72,10 +72,12 @@ export function useRecorder(options: UseRecorderOptions = {}) {
   const [chunks, setChunks] = useState<WavChunk[]>([])
   const [elapsed, setElapsed] = useState(0)
   const [stream, setStream] = useState<MediaStream | null>(null)
+  const [transcription, setTranscription] = useState("")
 
   const streamRef = useRef<MediaStream | null>(null)
   const audioCtxRef = useRef<AudioContext | null>(null)
   const processorRef = useRef<ScriptProcessorNode | null>(null)
+  const recognitionRef = useRef<any>(null)
   const samplesRef = useRef<Float32Array[]>([])
   const sampleCountRef = useRef(0)
   const chunkThreshold = SAMPLE_RATE * chunkDuration
@@ -164,6 +166,23 @@ export function useRecorder(options: UseRecorderOptions = {}) {
           ? { deviceId: { exact: deviceId }, echoCancellation: true, noiseSuppression: true }
           : { echoCancellation: true, noiseSuppression: true },
       })
+
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition
+      if (SpeechRecognition) {
+        const recognition = new SpeechRecognition()
+        recognition.continuous = true
+        recognition.interimResults = true
+        recognition.onresult = (event: any) => {
+          let text = ""
+          for (let i = event.resultIndex; i < event.results.length; ++i) {
+             text += event.results[i][0].transcript
+          }
+          // Simple trick to overwrite latest or append
+          setTranscription(text)
+        }
+        recognition.start()
+        recognitionRef.current = recognition
+      }
 
       const audioCtx = new AudioContext()
       const source = audioCtx.createMediaStreamSource(mediaStream)
@@ -327,5 +346,16 @@ export function useRecorder(options: UseRecorderOptions = {}) {
     }
   }, [])
 
-  return { status, start, stop, pause, resume, chunks, elapsed, stream, clearChunks }
+  return {
+    status,
+    start,
+    stop,
+    pause,
+    resume,
+    chunks,
+    elapsed,
+    stream,
+    clearChunks,
+    transcription,
+  }
 }
