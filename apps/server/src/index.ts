@@ -76,17 +76,33 @@ app.post("/api/chunks/upload", async (c) => {
   }
 });
 
-// Endpoint for the client to verify sync status
+// Endpoint for the client to verify sync status and enforce server-side reliability
 app.get("/api/chunks/check", async (c) => {
    const { ids } = c.req.query();
    if (!ids) return c.json({ missing: [] });
+   
    const idArray = ids.split(",");
-   // Find what does NOT exist in DB
-   const existing = await db.query.chunks.findMany({
-     columns: { id: true }
+   const missing: string[] = [];
+   
+   // Check both DB Ack AND Bucket File Existence for true server-side reliability
+   const existingDB = await db.query.chunks.findMany({
+     columns: { id: true, ack: true }
    });
-   const existingIds = new Set(existing.map(e => e.id));
-   const missing = idArray.filter(id => !existingIds.has(id));
+   const dbStates = new Map(existingDB.map(e => [e.id, e.ack]));
+   
+   for (const id of idArray) {
+     const hasDbAck = dbStates.get(id);
+     const filePath = path.join(BucketDir, `${id}.wav`);
+     const inBucket = existsSync(filePath);
+     
+     // The client must re-upload if:
+     // 1. It's missing from DB completely.
+     // 2. OR DB has ack but it's missing from the bucket!
+     if (!hasDbAck || !inBucket) {
+        missing.push(id);
+     }
+   }
+
    return c.json({ missing });
 });
 
