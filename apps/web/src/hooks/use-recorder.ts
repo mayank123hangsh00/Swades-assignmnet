@@ -226,9 +226,13 @@ export function useRecorder(options: UseRecorderOptions = {}) {
 
       timerRef.current = setInterval(() => {
         if (statusRef.current === "recording") {
-          setElapsed(
-            pausedElapsedRef.current + (Date.now() - startTimeRef.current) / 1000
-          )
+          const currentElapsed = pausedElapsedRef.current + (Date.now() - startTimeRef.current) / 1000
+          setElapsed(currentElapsed)
+          
+          // Enforce strictly 1-hour duration limit
+          if (currentElapsed >= 3600) {
+            stop()
+          }
         }
       }, 100)
     } catch {
@@ -279,7 +283,7 @@ export function useRecorder(options: UseRecorderOptions = {}) {
       try {
         const root = await navigator.storage.getDirectory()
         const opfsIds: string[] = []
-        for await (const name of root.keys()) {
+        for await (const name of (root as any).keys()) {
           opfsIds.push(name)
         }
         if (opfsIds.length === 0) return
