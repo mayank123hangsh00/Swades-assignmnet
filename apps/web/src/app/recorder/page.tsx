@@ -124,48 +124,82 @@ export default function RecorderPage() {
           </div>
 
           {/* Controls */}
-          <div className="flex items-center justify-center gap-3">
-            {/* Record / Stop */}
-            <Button
-              size="lg"
-              variant={isActive ? "destructive" : "default"}
-              className="gap-2 px-5"
-              onClick={handlePrimary}
-              disabled={status === "requesting"}
-            >
-              {isActive ? (
-                <>
-                  <Square className="size-4" />
-                  Stop
-                </>
-              ) : (
-                <>
-                  <Mic className="size-4" />
-                  {status === "requesting" ? "Requesting..." : "Record"}
-                </>
-              )}
-            </Button>
-
-            {/* Pause / Resume */}
-            {isActive && (
+          <div className="flex flex-col items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-3">
+              {/* Record / Stop */}
               <Button
                 size="lg"
-                variant="outline"
-                className="gap-2"
-                onClick={isPaused ? resume : pause}
+                variant={isActive ? "destructive" : "default"}
+                className="gap-2 px-5"
+                onClick={handlePrimary}
+                disabled={status === "requesting"}
               >
-                {isPaused ? (
+                {isActive ? (
                   <>
-                    <Play className="size-4" />
-                    Resume
+                    <Square className="size-4" />
+                    Stop
                   </>
                 ) : (
                   <>
-                    <Pause className="size-4" />
-                    Pause
+                    <Mic className="size-4" />
+                    {status === "requesting" ? "Requesting..." : "Record"}
                   </>
                 )}
               </Button>
+
+              {/* Pause / Resume */}
+              {isActive && (
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="gap-2"
+                  onClick={isPaused ? resume : pause}
+                >
+                  {isPaused ? (
+                    <>
+                      <Play className="size-4" />
+                      Resume
+                    </>
+                  ) : (
+                    <>
+                      <Pause className="size-4" />
+                      Pause
+                    </>
+                  )}
+                </Button>
+              )}
+            </div>
+            
+            {/* Manual File Upload Fallback */}
+            {!isActive && (
+              <div className="flex items-center gap-2 mt-2 w-full max-w-xs justify-center">
+                <span className="text-xs text-muted-foreground w-full text-center">or</span>
+              </div>
+            )}
+            {!isActive && (
+               <div className="flex w-full items-center justify-center max-w-xs">
+                 <label htmlFor="file-upload" className="cursor-pointer text-sm font-medium text-blue-600 hover:underline">
+                   Upload existing audio file
+                 </label>
+                 <input 
+                   id="file-upload" 
+                   type="file" 
+                   accept="audio/*"
+                   className="hidden" 
+                   onChange={async (e) => {
+                     const file = e.target.files?.[0];
+                     if (!file) return;
+                     const formData = new FormData();
+                     formData.append("chunkId", crypto.randomUUID());
+                     formData.append("file", file);
+                     await fetch("http://localhost:3000/api/chunks/upload", {
+                       method: "POST",
+                       body: formData
+                     }).catch(err => console.error("Direct upload failed", err));
+                     alert("File Uploaded");
+                   }}
+                 />
+               </div>
             )}
           </div>
         </CardContent>
