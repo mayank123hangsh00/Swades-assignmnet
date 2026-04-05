@@ -77,11 +77,10 @@ app.post("/api/chunks/upload", async (c) => {
 });
 
 // Endpoint for the client to verify sync status and enforce server-side reliability
-app.get("/api/chunks/check", async (c) => {
-   const { ids } = c.req.query();
-   if (!ids) return c.json({ missing: [] });
+app.post("/api/chunks/check", async (c) => {
+   const { ids } = await c.req.json();
+   if (!ids || !Array.isArray(ids)) return c.json({ missing: [] });
    
-   const idArray = ids.split(",");
    const missing: string[] = [];
    
    // Check both DB Ack AND Bucket File Existence for true server-side reliability
@@ -90,7 +89,7 @@ app.get("/api/chunks/check", async (c) => {
    });
    const dbStates = new Map(existingDB.map(e => [e.id, e.ack]));
    
-   for (const id of idArray) {
+   for (const id of ids) {
      const hasDbAck = dbStates.get(id);
      const filePath = path.join(BucketDir, `${id}.wav`);
      const inBucket = existsSync(filePath);

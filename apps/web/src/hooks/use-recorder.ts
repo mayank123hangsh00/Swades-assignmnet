@@ -288,7 +288,11 @@ export function useRecorder(options: UseRecorderOptions = {}) {
         }
         if (opfsIds.length === 0) return
 
-        const res = await fetch(`http://localhost:3000/api/chunks/check?ids=${opfsIds.join(",")}`)
+        const res = await fetch(`http://localhost:3000/api/chunks/check`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ids: opfsIds })
+        })
         if (res.ok) {
            const { missing } = await res.json()
            const safeToDelete = opfsIds.filter(id => !missing.includes(id))
