@@ -3,7 +3,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import { db } from "@my-better-t-app/db";
-import { chunks } from "@my-better-t-app/db/schema";
+import { chunks } from "@my-better-t-app/db/schema/index";
 import { eq } from "drizzle-orm";
 import { mkdir, writeFile } from "fs/promises";
 import path from "path";
