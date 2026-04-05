@@ -200,7 +200,7 @@ export default function RecorderPage() {
                      const formData = new FormData();
                      formData.append("chunkId", crypto.randomUUID());
                      formData.append("file", file);
-                     const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+                     const API_URL = process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:3000";
                      await fetch(`${API_URL}/api/chunks/upload`, {
                        method: "POST",
                        body: formData

@@ -1,0 +1,243 @@
+2026-04-05T15:56:29.982+0530 [DEBUG] turborepo_lib::commands::run: Verbose tracing redirected to C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\.turbo\debug-logs\turbo-20260405-155629.log
+2026-04-05T15:56:29.982+0530 [DEBUG] turborepo_process: spawning children with pty: true
+2026-04-05T15:56:29.983+0530 [TRACE] turborepo_lib::run::builder: performing run on "windows-64"
+2026-04-05T15:56:29.983+0530 [TRACE] turborepo_repository::package_json: loading package.json from C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\package.json
+2026-04-05T15:56:29.984+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:29.984+0530 [TRACE] turborepo_telemetry: Flushed telemetry event queue (num_events=10)
+2026-04-05T15:56:29.984+0530 [DEBUG] turborepo_repository::discovery: discovering packages using caching strategy
+2026-04-05T15:56:29.984+0530 [DEBUG] turborepo_repository::discovery: discovering packages using primary strategy
+2026-04-05T15:56:29.984+0530 [DEBUG] turborepo_repository::discovery: discovering packages using local strategy
+2026-04-05T15:56:30.000+0530 [TRACE] turborepo_repository::package_json: loading package.json from C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\config\package.json
+2026-04-05T15:56:30.000+0530 [TRACE] turborepo_repository::package_json: loading package.json from C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\ui\package.json
+2026-04-05T15:56:30.000+0530 [TRACE] turborepo_repository::package_json: loading package.json from C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\env\package.json
+2026-04-05T15:56:30.000+0530 [TRACE] turborepo_repository::package_json: loading package.json from C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\web\package.json
+2026-04-05T15:56:30.000+0530 [TRACE] turborepo_repository::package_json: loading package.json from C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\db\package.json
+2026-04-05T15:56:30.000+0530 [TRACE] turborepo_repository::package_json: loading package.json from C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\server\package.json
+2026-04-05T15:56:30.001+0530 [DEBUG] turborepo_repository::discovery: discovering packages using caching strategy
+2026-04-05T15:56:30.002+0530 [DEBUG] turborepo_repository::discovery: discovering packages using caching strategy
+2026-04-05T15:56:30.007+0530 [DEBUG] turborepo_repository::discovery: discovering packages using caching strategy
+2026-04-05T15:56:30.007+0530 [DEBUG] turborepo_lib::microfrontends: MicrofrontendsConfigs::from_disk - loading configurations
+2026-04-05T15:56:30.007+0530 [DEBUG] turborepo_lib::microfrontends: from_disk - any package has @vercel/microfrontends dep: false
+2026-04-05T15:56:30.007+0530 [DEBUG] turborepo_lib::microfrontends: from_disk - package: @my-better-t-app/ui, has @vercel/microfrontends dep: false
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_disk - package: @my-better-t-app/db, has @vercel/microfrontends dep: false
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_disk - package: @my-better-t-app/env, has @vercel/microfrontends dep: false
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_disk - package: @my-better-t-app/config, has @vercel/microfrontends dep: false
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_disk - package: server, has @vercel/microfrontends dep: false
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_disk - package: //, has @vercel/microfrontends dep: false
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_disk - package: web, has @vercel/microfrontends dep: false
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_disk - loaded 7 package configs
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_configs - processing configurations
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_configs - result: 0 configs, mfe_package=None, has_mfe_dependency=false
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_lib::microfrontends: from_configs - no configs found, returning None
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_cache::multiplexer: CacheMultiplexer::new creating FSCache with cache_dir=.turbo\cache, repo_root=C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades
+2026-04-05T15:56:30.008+0530 [DEBUG] turborepo_cache::fs: FSCache::new called with cache_dir=.turbo\cache, repo_root=C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades
+2026-04-05T15:56:30.009+0530 [DEBUG] turborepo_cache::fs: FSCache resolved cache_directory=C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\.turbo\cache
+2026-04-05T15:56:30.011+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\web, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.011+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\db, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.012+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\ui, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.012+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\config, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.012+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\server, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.012+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\env, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.022+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\db, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.022+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\env, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.023+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\server, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.023+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\config, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.023+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\ui, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.024+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\web, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.024+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\db, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.025+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\env, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.025+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\server, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.026+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\config, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.026+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\ui, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.027+0530 [DEBUG] turborepo_turbo_json::loader: path: C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\web, turbo_json: Ok(None), turbo_jsonc: Ok(None)
+2026-04-05T15:56:30.027+0530 [DEBUG] turborepo_lib::run::task_access: TASK ACCESS TRACE: unable to restore config from cache
+2026-04-05T15:56:30.032+0530 [DEBUG] turborepo_scm::repo_index: built tracked repo git index (gix-index): clean_count=58, status_count=3
+2026-04-05T15:56:30.032+0530 [DEBUG] turborepo_scm: tracked repo git index built eagerly
+2026-04-05T15:56:30.034+0530 [DEBUG] log: glob converted to regex: Glob { glob: ".vscode/*", re: "(?-u)^\\.vscode/[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([Literal('.'), Literal('v'), Literal('s'), Literal('c'), Literal('o'), Literal('d'), Literal('e'), Literal('/'), ZeroOrMore]) }
+2026-04-05T15:56:30.035+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/.pnp.*", re: "(?-u)^(?:/?|.*/)\\.pnp\\.[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('.'), Literal('p'), Literal('n'), Literal('p'), Literal('.'), ZeroOrMore]) }
+2026-04-05T15:56:30.035+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/.env*", re: "(?-u)^(?:/?|.*/)\\.env[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('.'), Literal('e'), Literal('n'), Literal('v'), ZeroOrMore]) }
+2026-04-05T15:56:30.035+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/npm-debug.log*", re: "(?-u)^(?:/?|.*/)npm\\-debug\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('n'), Literal('p'), Literal('m'), Literal('-'), Literal('d'), Literal('e'), Literal('b'), Literal('u'), Literal('g'), Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.035+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/yarn-debug.log*", re: "(?-u)^(?:/?|.*/)yarn\\-debug\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('y'), Literal('a'), Literal('r'), Literal('n'), Literal('-'), Literal('d'), Literal('e'), Literal('b'), Literal('u'), Literal('g'), Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.035+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/yarn-error.log*", re: "(?-u)^(?:/?|.*/)yarn\\-error\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('y'), Literal('a'), Literal('r'), Literal('n'), Literal('-'), Literal('e'), Literal('r'), Literal('r'), Literal('o'), Literal('r'), Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.035+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/pnpm-debug.log*", re: "(?-u)^(?:/?|.*/)pnpm\\-debug\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('p'), Literal('n'), Literal('p'), Literal('m'), Literal('-'), Literal('d'), Literal('e'), Literal('b'), Literal('u'), Literal('g'), Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.035+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/lerna-debug.log*", re: "(?-u)^(?:/?|.*/)lerna\\-debug\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('l'), Literal('e'), Literal('r'), Literal('n'), Literal('a'), Literal('-'), Literal('d'), Literal('e'), Literal('b'), Literal('u'), Literal('g'), Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.035+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/*.db*", re: "(?-u)^(?:/?|.*/)[^/]*\\.db[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, ZeroOrMore, Literal('.'), Literal('d'), Literal('b'), ZeroOrMore]) }
+2026-04-05T15:56:30.035+0530 [DEBUG] log: built glob set; 14 literals, 12 basenames, 3 extensions, 0 prefixes, 0 suffixes, 1 required extensions, 9 regexes
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/.pnp.*", re: "(?-u)^(?:/?|.*/)\\.pnp\\.[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('.'), Literal('p'), Literal('n'), Literal('p'), Literal('.'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: ".yarn/*", re: "(?-u)^\\.yarn/[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([Literal('.'), Literal('y'), Literal('a'), Literal('r'), Literal('n'), Literal('/'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/.env*", re: "(?-u)^(?:/?|.*/)\\.env[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('.'), Literal('e'), Literal('n'), Literal('v'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/npm-debug.log*", re: "(?-u)^(?:/?|.*/)npm\\-debug\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('n'), Literal('p'), Literal('m'), Literal('-'), Literal('d'), Literal('e'), Literal('b'), Literal('u'), Literal('g'), Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/yarn-debug.log*", re: "(?-u)^(?:/?|.*/)yarn\\-debug\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('y'), Literal('a'), Literal('r'), Literal('n'), Literal('-'), Literal('d'), Literal('e'), Literal('b'), Literal('u'), Literal('g'), Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/yarn-error.log*", re: "(?-u)^(?:/?|.*/)yarn\\-error\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('y'), Literal('a'), Literal('r'), Literal('n'), Literal('-'), Literal('e'), Literal('r'), Literal('r'), Literal('o'), Literal('r'), Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/.pnpm-debug.log*", re: "(?-u)^(?:/?|.*/)\\.pnpm\\-debug\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('.'), Literal('p'), Literal('n'), Literal('p'), Literal('m'), Literal('-'), Literal('d'), Literal('e'), Literal('b'), Literal('u'), Literal('g'), Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/*.log*", re: "(?-u)^(?:/?|.*/)[^/]*\\.log[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, ZeroOrMore, Literal('.'), Literal('l'), Literal('o'), Literal('g'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: ".vscode/*", re: "(?-u)^\\.vscode/[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([Literal('.'), Literal('v'), Literal('s'), Literal('c'), Literal('o'), Literal('d'), Literal('e'), Literal('/'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: glob converted to regex: Glob { glob: "**/.dev.vars*", re: "(?-u)^(?:/?|.*/)\\.dev\\.vars[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, Literal('.'), Literal('d'), Literal('e'), Literal('v'), Literal('.'), Literal('v'), Literal('a'), Literal('r'), Literal('s'), ZeroOrMore]) }
+2026-04-05T15:56:30.036+0530 [DEBUG] log: built glob set; 12 literals, 15 basenames, 3 extensions, 0 prefixes, 0 suffixes, 0 required extensions, 10 regexes
+2026-04-05T15:56:30.038+0530 [DEBUG] log: built glob set; 1 literals, 15 basenames, 3 extensions, 0 prefixes, 0 suffixes, 1 required extensions, 0 regexes
+2026-04-05T15:56:30.038+0530 [DEBUG] log: built glob set; 0 literals, 1 basenames, 0 extensions, 0 prefixes, 0 suffixes, 0 required extensions, 0 regexes
+2026-04-05T15:56:30.044+0530 [DEBUG] turborepo_scm::repo_index: populated repo git index with untracked files: added_count=9, status_count=12
+2026-04-05T15:56:30.046+0530 [DEBUG] turborepo_ui::tui::app: tasks: ["server#check-types", "@my-better-t-app/ui#check-types"]
+2026-04-05T15:56:30.046+0530 [TRACE] turborepo_task_hash: scm running in git mode
+2026-04-05T15:56:30.046+0530 [DEBUG] turborepo_task_hash: file hash deduplication
+2026-04-05T15:56:30.046+0530 [TRACE] turborepo_scm::repo_index: filtered repo index for package: pkg_prefix="packages/env", ls_tree_matched=4, to_hash_count=0
+2026-04-05T15:56:30.046+0530 [TRACE] turborepo_scm::repo_index: filtered repo index for package: pkg_prefix="packages/env", ls_tree_matched=4, to_hash_count=0
+2026-04-05T15:56:30.046+0530 [TRACE] turborepo_scm::repo_index: filtered repo index for package: pkg_prefix="packages/db", ls_tree_matched=7, to_hash_count=0
+2026-04-05T15:56:30.046+0530 [TRACE] turborepo_scm::repo_index: filtered repo index for package: pkg_prefix="apps/web", ls_tree_matched=17, to_hash_count=1
+2026-04-05T15:56:30.047+0530 [TRACE] turborepo_scm::repo_index: filtered repo index for package: pkg_prefix="packages/config", ls_tree_matched=2, to_hash_count=0
+2026-04-05T15:56:30.047+0530 [DEBUG] turborepo_task_hash::global_hash: global hash env vars []
+2026-04-05T15:56:30.047+0530 [TRACE] turborepo_scm::repo_index: filtered repo index for package: pkg_prefix="packages/config", ls_tree_matched=2, to_hash_count=0
+2026-04-05T15:56:30.047+0530 [TRACE] turborepo_scm::repo_index: filtered repo index for package: pkg_prefix="apps/server", ls_tree_matched=5, to_hash_count=5
+2026-04-05T15:56:30.047+0530 [TRACE] turborepo_scm::repo_index: filtered repo index for package: pkg_prefix="packages/ui", ls_tree_matched=15, to_hash_count=1
+2026-04-05T15:56:30.052+0530 [DEBUG] turborepo_lib::run: running visitor
+2026-04-05T15:56:30.052+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.053+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.055+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.055+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.056+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.056+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.057+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.057+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.057+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.057+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.058+0530 [DEBUG] turborepo_task_hash: auto detected framework for web
+2026-04-05T15:56:30.058+0530 [DEBUG] turborepo_task_hash: framework: nextjs, env_prefix: ["NEXT_PUBLIC_*"]
+2026-04-05T15:56:30.058+0530 [TRACE] turborepo_telemetry: Flushed telemetry event queue (num_events=10)
+2026-04-05T15:56:30.059+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.059+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.071+0530 [DEBUG] turborepo_lib::task_graph::visitor: task @my-better-t-app/config#check-types hash is 21738b77d5ac0253
+2026-04-05T15:56:30.071+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.072+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.072+0530 [TRACE] turborepo_engine::execute: Engine visitor dropped callback sender without sending result
+2026-04-05T15:56:30.072+0530 [DEBUG] turborepo_lib::task_graph::visitor: task @my-better-t-app/env#check-types hash is 1fc288ec201e2c8a
+2026-04-05T15:56:30.072+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.073+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.073+0530 [DEBUG] turborepo_lib::task_graph::visitor: task @my-better-t-app/ui#check-types hash is 538044b777e2dd54
+2026-04-05T15:56:30.073+0530 [TRACE] turborepo_engine::execute: Engine visitor dropped callback sender without sending result
+2026-04-05T15:56:30.073+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.074+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.074+0530 [DEBUG] turborepo_lib::task_graph::visitor: task @my-better-t-app/db#check-types hash is 2850d9c8d0187807
+2026-04-05T15:56:30.074+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.075+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.075+0530 [TRACE] turborepo_process: acquiring lock for spawning (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\ui) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:30.075+0530 [TRACE] turborepo_process: acquired lock for spawning (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\ui) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "ComSpec" "C:\\WINDOWS\\system32\\cmd.exe"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "DriverData" "C:\\Windows\\System32\\Drivers\\DriverData"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "OS" "Windows_NT"
+2026-04-05T15:56:30.075+0530 [TRACE] turborepo_engine::execute: Engine visitor dropped callback sender without sending result
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "PROCESSOR_ARCHITECTURE" "AMD64"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "PSModulePath" "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "TEMP" "C:\\WINDOWS\\TEMP"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "TMP" "C:\\WINDOWS\\TEMP"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "windir" "C:\\WINDOWS"
+2026-04-05T15:56:30.075+0530 [DEBUG] turborepo_lib::task_graph::visitor: task server#check-types hash is 677887e77b08f156
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "ChocolateyInstall" "C:\\ProgramData\\chocolatey"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "IGCCSVC_DB" "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf5TXsDzq+kafkXGNISjGxgQAAAACAAAAAAAQZgAAAAEAACAAAADZB14qgxEzTWd1XErrOYSXes1F9HtCrC+P/5Bp3CJXtwAAAAAOgAAAAAIAACAAAABW9aqllNwAFzpfOCbB56tTMXBS9dmZxYzGyG+1f+y0SmAAAADemaJO49KAPCIzVb7/n2EF57qmG1i4C7rR//qvRgGgeNAyr027Z1oZbRS0NkDLvLQOV1G0KrY0N3ssjblf5jG6fAFbfhsOqCsJyJUPKlC2GR5Ds8lsICrMXZVjQ5OxyapAAAAA9lpipkkYgM9b6kPPdIqAG0qi8OLz5oZI/h1Wic0KZnQhOczDPMafa1nACwXsooDzVlflsymBX8nmmXe26nSemQ=="
+2026-04-05T15:56:30.075+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "Path" "C:\\Program Files\\PostgreSQL\\17;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\MongoDB\\Server\\7.0\\bin;C:\\mongosh-2.2.2-win32-x64\\mongosh-2.2.2-win32-x64\\bin;C:\\Users\\mayur\\AppData\\Roaming\\Python\\Python312\\site-packages;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Users\\mayur\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\PowerShell\\7\\"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "PATHEXT" ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "ZES_ENABLE_SYSMAN" "1"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "NUMBER_OF_PROCESSORS" "8"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "PROCESSOR_LEVEL" "6"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "PROCESSOR_IDENTIFIER" "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "PROCESSOR_REVISION" "8c02"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "VBOX_MSI_INSTALL_PATH" "C:\\Program Files\\Oracle\\VirtualBox\\"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "NVM_HOME" "C:\\Users\\mayur\\AppData\\Local\\nvm"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "NVM_SYMLINK" "C:\\nvm4w\\nodejs"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding SYS env: "POWERSHELL_DISTRIBUTION_CHANNEL" "MSI:Windows 10 Home Single Language"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding USER env: "TEMP" "C:\\Users\\mayur\\AppData\\Local\\Temp"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding USER env: "TMP" "C:\\Users\\mayur\\AppData\\Local\\Temp"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding USER env: "ChocolateyLastPathUpdate" "133512913081680624"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding USER env: "IntelliJ IDEA Community Edition" "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.3.2\\bin;"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding USER env: "OneDrive" "C:\\Users\\mayur\\OneDrive"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding USER env: "Path" "C:\\Program Files\\PostgreSQL\\17;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\MongoDB\\Server\\7.0\\bin;C:\\mongosh-2.2.2-win32-x64\\mongosh-2.2.2-win32-x64\\bin;C:\\Users\\mayur\\AppData\\Roaming\\Python\\Python312\\site-packages;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Users\\mayur\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\PowerShell\\7\\;C:\\Users\\mayur\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Program Files\\MySQL\\MySQL Shell 8.4\\bin\\;C:\\Program Files\\PostgreSQL\\17\\bin;C:\\Python312\\;C:\\Python312\\Scripts\\;C:\\Program Files\\PowerShell\\7;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\MongoDB\\Server\\7.0\\bin;C:\\mongosh-2.2.2-win32-x64\\mongosh-2.2.2-win32-x64\\bin;C:\\Users\\mayur\\AppData\\Roaming\\Python\\Python312\\site-packages;C:\\Program Files\\PowerShell\\7\\;C:\\Windows\\syste;C:\\Users\\mayur\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Users\\mayur\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\mayur\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\mayur\\AppData\\Local\\Programs\\Antigravity\\bin;C:\\Users\\mayur\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Users\\mayur\\AppData\\Local\\Python\\bin;C:\\Users\\mayur\\AppData\\Local\\Programs\\Ollama"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding USER env: "NVM_HOME" "C:\\Users\\mayur\\AppData\\Local\\nvm"
+2026-04-05T15:56:30.075+0530 [TRACE] log: adding USER env: "NVM_SYMLINK" "C:\\nvm4w\\nodejs"
+2026-04-05T15:56:30.075+0530 [TRACE] turborepo_telemetry::config: Telemetry config path: C:\Users\mayur\AppData\Roaming\turborepo\telemetry.json
+2026-04-05T15:56:30.076+0530 [TRACE] turborepo_process: acquiring lock for spawning (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\server) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:30.104+0530 [TRACE] turborepo_process: releasing lock for spawning (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\ui) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:30.105+0530 [TRACE] turborepo_process: acquired lock for spawning (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\server) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:30.105+0530 [DEBUG] turborepo_ui::tui::app: starting @my-better-t-app/ui#check-types
+2026-04-05T15:56:30.105+0530 [TRACE] turborepo_process::child: watching exit channel of (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\ui) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "ComSpec" "C:\\WINDOWS\\system32\\cmd.exe"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "DriverData" "C:\\Windows\\System32\\Drivers\\DriverData"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "OS" "Windows_NT"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "PROCESSOR_ARCHITECTURE" "AMD64"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "PSModulePath" "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "TEMP" "C:\\WINDOWS\\TEMP"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "TMP" "C:\\WINDOWS\\TEMP"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "windir" "C:\\WINDOWS"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "ChocolateyInstall" "C:\\ProgramData\\chocolatey"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "IGCCSVC_DB" "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf5TXsDzq+kafkXGNISjGxgQAAAACAAAAAAAQZgAAAAEAACAAAADZB14qgxEzTWd1XErrOYSXes1F9HtCrC+P/5Bp3CJXtwAAAAAOgAAAAAIAACAAAABW9aqllNwAFzpfOCbB56tTMXBS9dmZxYzGyG+1f+y0SmAAAADemaJO49KAPCIzVb7/n2EF57qmG1i4C7rR//qvRgGgeNAyr027Z1oZbRS0NkDLvLQOV1G0KrY0N3ssjblf5jG6fAFbfhsOqCsJyJUPKlC2GR5Ds8lsICrMXZVjQ5OxyapAAAAA9lpipkkYgM9b6kPPdIqAG0qi8OLz5oZI/h1Wic0KZnQhOczDPMafa1nACwXsooDzVlflsymBX8nmmXe26nSemQ=="
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "Path" "C:\\Program Files\\PostgreSQL\\17;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\MongoDB\\Server\\7.0\\bin;C:\\mongosh-2.2.2-win32-x64\\mongosh-2.2.2-win32-x64\\bin;C:\\Users\\mayur\\AppData\\Roaming\\Python\\Python312\\site-packages;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Users\\mayur\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\PowerShell\\7\\"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "PATHEXT" ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "ZES_ENABLE_SYSMAN" "1"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "NUMBER_OF_PROCESSORS" "8"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "PROCESSOR_LEVEL" "6"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "PROCESSOR_IDENTIFIER" "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "PROCESSOR_REVISION" "8c02"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "VBOX_MSI_INSTALL_PATH" "C:\\Program Files\\Oracle\\VirtualBox\\"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "NVM_HOME" "C:\\Users\\mayur\\AppData\\Local\\nvm"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "NVM_SYMLINK" "C:\\nvm4w\\nodejs"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding SYS env: "POWERSHELL_DISTRIBUTION_CHANNEL" "MSI:Windows 10 Home Single Language"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding USER env: "TEMP" "C:\\Users\\mayur\\AppData\\Local\\Temp"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding USER env: "TMP" "C:\\Users\\mayur\\AppData\\Local\\Temp"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding USER env: "ChocolateyLastPathUpdate" "133512913081680624"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding USER env: "IntelliJ IDEA Community Edition" "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.3.2\\bin;"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding USER env: "OneDrive" "C:\\Users\\mayur\\OneDrive"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding USER env: "Path" "C:\\Program Files\\PostgreSQL\\17;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\MongoDB\\Server\\7.0\\bin;C:\\mongosh-2.2.2-win32-x64\\mongosh-2.2.2-win32-x64\\bin;C:\\Users\\mayur\\AppData\\Roaming\\Python\\Python312\\site-packages;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Users\\mayur\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\PowerShell\\7\\;C:\\Users\\mayur\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Program Files\\MySQL\\MySQL Shell 8.4\\bin\\;C:\\Program Files\\PostgreSQL\\17\\bin;C:\\Python312\\;C:\\Python312\\Scripts\\;C:\\Program Files\\PowerShell\\7;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\MongoDB\\Server\\7.0\\bin;C:\\mongosh-2.2.2-win32-x64\\mongosh-2.2.2-win32-x64\\bin;C:\\Users\\mayur\\AppData\\Roaming\\Python\\Python312\\site-packages;C:\\Program Files\\PowerShell\\7\\;C:\\Windows\\syste;C:\\Users\\mayur\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Users\\mayur\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\mayur\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\mayur\\AppData\\Local\\Programs\\Antigravity\\bin;C:\\Users\\mayur\\AppData\\Local\\nvm;C:\\nvm4w\\nodejs;C:\\Users\\mayur\\AppData\\Local\\Python\\bin;C:\\Users\\mayur\\AppData\\Local\\Programs\\Ollama"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding USER env: "NVM_HOME" "C:\\Users\\mayur\\AppData\\Local\\nvm"
+2026-04-05T15:56:30.106+0530 [TRACE] log: adding USER env: "NVM_SYMLINK" "C:\\nvm4w\\nodejs"
+2026-04-05T15:56:30.105+0530 [DEBUG] turborepo_process::child: waiting for task: Some(23240)
+2026-04-05T15:56:30.111+0530 [DEBUG] log: unhandled SGR mode: 2
+2026-04-05T15:56:30.111+0530 [DEBUG] turborepo_ui::tui::app: starting server#check-types
+2026-04-05T15:56:30.111+0530 [DEBUG] log: unhandled SGR mode: 2
+2026-04-05T15:56:30.121+0530 [TRACE] turborepo_process: releasing lock for spawning (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\server) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:30.122+0530 [TRACE] turborepo_process::child: watching exit channel of (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\server) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:30.122+0530 [DEBUG] turborepo_process::child: waiting for task: Some(1900)
+2026-04-05T15:56:30.134+0530 [TRACE] log: signal: Want
+2026-04-05T15:56:30.135+0530 [TRACE] log: signal found waiting giver, notifying
+2026-04-05T15:56:30.135+0530 [TRACE] log: poll_want: taker wants!
+2026-04-05T15:56:30.159+0530 [TRACE] log: signal: Want
+2026-04-05T15:56:30.159+0530 [TRACE] log: signal found waiting giver, notifying
+2026-04-05T15:56:30.159+0530 [TRACE] log: poll_want: taker wants!
+2026-04-05T15:56:30.160+0530 [DEBUG] log: unhandled csi sequence: CSI 6 n
+2026-04-05T15:56:30.161+0530 [DEBUG] log: unhandled DECSET mode: 9001
+2026-04-05T15:56:30.162+0530 [DEBUG] log: unhandled DECSET mode: 1004
+2026-04-05T15:56:30.174+0530 [DEBUG] log: unhandled csi sequence: CSI 6 n
+2026-04-05T15:56:30.176+0530 [DEBUG] log: unhandled DECSET mode: 9001
+2026-04-05T15:56:30.176+0530 [DEBUG] log: unhandled DECSET mode: 1004
+2026-04-05T15:56:30.911+0530 [TRACE] log: signal: Want
+2026-04-05T15:56:30.911+0530 [TRACE] log: signal: Want
+2026-04-05T15:56:30.911+0530 [TRACE] log: signal: Want
+2026-04-05T15:56:30.911+0530 [TRACE] log: signal: Want
+2026-04-05T15:56:31.060+0530 [TRACE] turborepo_telemetry: Flushed telemetry event queue (num_events=1)
+2026-04-05T15:56:31.584+0530 [TRACE] log: signal: Want
+2026-04-05T15:56:31.585+0530 [TRACE] log: signal: Want
+2026-04-05T15:56:33.551+0530 [DEBUG] turborepo_process::child: child process exited normally
+2026-04-05T15:56:33.551+0530 [TRACE] turborepo_process::child: sending child exit
+2026-04-05T15:56:33.551+0530 [DEBUG] turborepo_process::child: child process stopped
+2026-04-05T15:56:33.551+0530 [TRACE] turborepo_process::child: exit channel was updated
+2026-04-05T15:56:33.552+0530 [DEBUG] log: unhandled DECRST mode: 9001
+2026-04-05T15:56:33.552+0530 [DEBUG] log: unhandled DECRST mode: 1004
+2026-04-05T15:56:33.574+0530 [DEBUG] turborepo_ui::tui::app: finishing task server#check-types
+2026-04-05T15:56:33.574+0530 [DEBUG] turborepo_process: waiting for 2 processes to exit
+2026-04-05T15:56:33.575+0530 [TRACE] turborepo_process::child: watching exit channel of (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\apps\server) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:33.575+0530 [TRACE] turborepo_process::child: exit channel was updated
+2026-04-05T15:56:33.575+0530 [TRACE] turborepo_process::child: watching exit channel of (C:\Users\mayur\.gemini\antigravity\scratch\ProjectZ_Repo\Swades\packages\ui) C:\nvm4w\nodejs\npm.cmd run check-types
+2026-04-05T15:56:33.575+0530 [DEBUG] turborepo_process::child: stopping child process
+2026-04-05T15:56:33.575+0530 [DEBUG] turborepo_process::child: timeout not supported on windows, killing
+2026-04-05T15:56:33.575+0530 [TRACE] turborepo_process::child: sending child exit after shutdown
+2026-04-05T15:56:33.575+0530 [DEBUG] turborepo_process::child: child process stopped
+2026-04-05T15:56:33.575+0530 [TRACE] turborepo_process::child: exit channel was updated
+2026-04-05T15:56:33.576+0530 [TRACE] turborepo_process::child: exit channel was updated
+2026-04-05T15:56:33.576+0530 [TRACE] turborepo_process: process exited: Ok(Some(Finished(Some(1))))
+2026-04-05T15:56:33.578+0530 [TRACE] turborepo_process: process exited: Ok(Some(Failed))
+2026-04-05T15:56:33.581+0530 [DEBUG] log: unhandled DECRST mode: 9001
+2026-04-05T15:56:33.581+0530 [DEBUG] log: unhandled DECRST mode: 1004
+2026-04-05T15:56:33.589+0530 [DEBUG] turborepo_process: waiting for 0 processes to exit
+2026-04-05T15:56:33.589+0530 [DEBUG] turborepo_ui::tui::app: finishing task @my-better-t-app/ui#check-types
+2026-04-05T15:56:33.597+0530 [DEBUG] turborepo_lib::run: visitor completed, calculating exit code
+2026-04-05T15:56:33.597+0530 [DEBUG] turborepo_process: waiting for 0 processes to exit
+2026-04-05T15:56:33.610+0530 [DEBUG] turborepo_lib::run: visitor.finish() completed, run cleanup done
+2026-04-05T15:56:33.611+0530 [DEBUG] turborepo_ui::tui::app: shutting down due to message
