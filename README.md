@@ -9,6 +9,19 @@ A production-ready, high-reliability audio recording pipeline built for the Swad
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
+
+### 🎙️ Live Recorder & Transcription
+![Recorder](screenshots/recorder.png)
+
+### 📦 Audio Chunk Management
+![Chunks](screenshots/chunks.png)
+
+---
+
 ## ✨ Key Features
 
 ### 1. 🛡️ 5-Minute Reliable Chunking
