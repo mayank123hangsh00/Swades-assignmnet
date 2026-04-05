@@ -10,8 +10,8 @@ COPY . .
 # Install all dependencies using Bun
 RUN bun install
 
-# Build the server app using Turbo + Bun
-RUN bun x turbo build --filter server --package-manager=bun
+# Build the server app DIRECTLY (skipping Turbo to avoid binary path issues)
+RUN cd apps/server && bun run build
 
 # Switch to the server app directory for execution
 WORKDIR /app/apps/server
