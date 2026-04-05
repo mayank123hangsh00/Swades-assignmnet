@@ -86,9 +86,11 @@ export function useRecorder(options: UseRecorderOptions = {}) {
 
   statusRef.current = status
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
   const saveToOPFS = async (id: string, blob: Blob) => {
     try {
-      const root = await navigator.storage.getDirectory()
+      const root = await navigator.storage.getDirectory() as any
       const fileHandle = await root.getFileHandle(id, { create: true })
       const writable = await fileHandle.createWritable()
       await writable.write(blob)
@@ -100,7 +102,7 @@ export function useRecorder(options: UseRecorderOptions = {}) {
 
   const deleteFromOPFS = async (id: string) => {
     try {
-      const root = await navigator.storage.getDirectory()
+      const root = await navigator.storage.getDirectory() as any
       await root.removeEntry(id).catch(() => {})
     } catch (err) {}
   }
@@ -111,15 +113,12 @@ export function useRecorder(options: UseRecorderOptions = {}) {
       formData.append("chunkId", id)
       formData.append("file", blob, `${id}.wav`)
 
-      const res = await fetch("http://localhost:3000/api/chunks/upload", {
+      const res = await fetch(`${API_URL}/api/chunks/upload`, {
         method: "POST",
         body: formData,
       })
       if (res.ok) {
-        // If uploaded successfully, checking if DB and bucket are in sync is done by the check API
-        // For simplicity, we can delete from OPFS later during reconciliation or after some time.
-        // Actually the prompt says: "chunks are only cleared after the bucket and DB are both confirmed in sync"
-        // We'll leave it in OPFS until the reconciliation process clears it.
+        // Leave it in OPFS until the reconciliation process clears it.
       }
     } catch (err) {
       console.error("Upload failed, keeping in OPFS", err)
@@ -181,7 +180,6 @@ export function useRecorder(options: UseRecorderOptions = {}) {
         sampleCountRef.current += resampled.length
 
         if (sampleCountRef.current >= chunkThreshold) {
-          // flush synchronously from the collected buffers
           const totalLen = samplesRef.current.reduce((n, b) => n + b.length, 0)
           const merged = new Float32Array(totalLen)
           let off = 0
@@ -229,7 +227,6 @@ export function useRecorder(options: UseRecorderOptions = {}) {
           const currentElapsed = pausedElapsedRef.current + (Date.now() - startTimeRef.current) / 1000
           setElapsed(currentElapsed)
           
-          // Enforce strictly 1-hour duration limit
           if (currentElapsed >= 3600) {
             stop()
           }
@@ -281,14 +278,14 @@ export function useRecorder(options: UseRecorderOptions = {}) {
   useEffect(() => {
     const doReconciliation = async () => {
       try {
-        const root = await navigator.storage.getDirectory()
+        const root = await navigator.storage.getDirectory() as any
         const opfsIds: string[] = []
-        for await (const name of (root as any).keys()) {
+        for await (const name of root.keys()) {
           opfsIds.push(name)
         }
         if (opfsIds.length === 0) return
 
-        const res = await fetch(`http://localhost:3000/api/chunks/check`, {
+        const res = await fetch(`${API_URL}/api/chunks/check`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ ids: opfsIds })

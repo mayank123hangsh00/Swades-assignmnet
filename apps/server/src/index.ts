@@ -9,7 +9,10 @@ import { mkdir, writeFile } from "fs/promises";
 import path from "path";
 import { existsSync } from "fs";
 
-const BucketDir = path.join(process.cwd(), "bucket");
+const BucketDir = process.env.NODE_ENV === "production" 
+  ? path.join("/tmp", "bucket") 
+  : path.join(process.cwd(), "bucket");
+
 if (!existsSync(BucketDir)) {
   mkdir(BucketDir, { recursive: true }).catch(console.error);
 }
